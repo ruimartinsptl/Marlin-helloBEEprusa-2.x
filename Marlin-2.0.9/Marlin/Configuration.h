@@ -831,7 +831,7 @@
  */
 #define X_DRIVER_TYPE  TMC2208_STANDALONE
 #define Y_DRIVER_TYPE  TMC2208_STANDALONE
-#define Z_DRIVER_TYPE  TMC2208_STANDALONE
+#define Z_DRIVER_TYPE  TMC2209_STANDALONE  // TMC2226
 //#define X2_DRIVER_TYPE A4988
 //#define Y2_DRIVER_TYPE A4988
 //#define Z2_DRIVER_TYPE A4988
@@ -895,7 +895,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 409 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 393.87 }  // Hemera should be 409 ?
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1147,7 +1147,8 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -26, -36, -1.8 }
+// #define NOZZLE_TO_PROBE_OFFSET { -26, -36, -1.8 }
+#define NOZZLE_TO_PROBE_OFFSET { -26, -36, -2.8 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
